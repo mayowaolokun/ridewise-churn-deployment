@@ -1,0 +1,5 @@
+RFMS_segment,RFMS_weighted_score,session_after_last_trip_days,total_spent,total_trips,avg_surge,city,loyalty_status,age,was_referred
+At Risk,2.4,45,120.5,9,1.1,Lagos,Bronze,32,0
+Core Loyal Riders,3.6,10,350.0,25,1.05,Nairobi,Silver,41,1
+Occasional Riders,2.9,28,180.0,14,1.2,Cairo,Bronze,29,0
+High-Value Surge-Tolerant,4.2,5,620.0,40,1.4,Lagos,Gold,38,1
