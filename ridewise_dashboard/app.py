@@ -1,4 +1,5 @@
 import io
+import os
 import json
 import requests
 import pandas as pd
@@ -85,11 +86,13 @@ def plot_risk_distribution(df: pd.DataFrame, col: str = "risk_bucket"):
 # -----------------------------
 st.sidebar.title("⚙️ Settings")
 
-default_api = "http://127.0.0.1:8000"
+# Use Render env var if present, otherwise fallback to local FastAPI
+default_api = os.getenv("API_BASE_URL", "http://127.0.0.1:8000").rstrip("/")
+
 API_BASE = st.sidebar.text_input(
     "FastAPI Base URL",
     value=default_api,
-    help="Where your FastAPI service is running. Example: http://127.0.0.1:8000"
+    help="Use your deployed FastAPI URL on Render (e.g., https://ridewise-churn-api.onrender.com)"
 ).rstrip("/")
 
 with st.sidebar:
